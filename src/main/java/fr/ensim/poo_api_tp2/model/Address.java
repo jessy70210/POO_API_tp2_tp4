@@ -13,6 +13,7 @@ public class Address {
     private Long id;
     private Date creation;
     private String content;
+    private String contact;
 
     public Long getId() {
         return id;
@@ -36,5 +37,13 @@ public class Address {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 }

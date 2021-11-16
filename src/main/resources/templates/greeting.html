@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr" xml:th="http://www.thymeleaf.org">
 <head>
-  <title>Blog</title>
+  <title th:replace = "~{../fragments/template::title}">Greeting</title>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+
+  <th:block th:insert="~{../fragments/template::link}"></th:block>
+
+
 </head>
 <body>
-  <p th:text="'Bonjour ' + ${nomTemplate} + ' !'" />
+
+  <nav th:replace="~{../fragments/template::nav}"></nav>
+
+  <p class="text-danger" th:text="'Bonjour ' + ${nomTemplate} + ' !'" />
 </body>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 </html>

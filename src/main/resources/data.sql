@@ -1,0 +1,2 @@
+INSERT INTO address (id , creation , content, contact ) VALUES (1,CURRENT_TIMESTAMP() , '57 boulevard demorieux ', 'Kevin Zemsi');
+INSERT INTO address (id , creation , content, contact ) VALUES (2,CURRENT_TIMESTAMP() , '51 allee du gamay , 34080 montpellier ', 'Alexis Galignier');
