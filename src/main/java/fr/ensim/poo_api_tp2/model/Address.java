@@ -13,7 +13,7 @@ public class Address {
     private Long id;
     private Date creation;
     private String content;
-    private String contact;
+    private String auteur;
 
     public Long getId() {
         return id;
@@ -39,11 +39,11 @@ public class Address {
         this.content = content;
     }
 
-    public String getContact() {
-        return contact;
+    public String getAuteur() {
+        return auteur;
     }
 
-    public void setContact(String contact) {
-        this.contact = contact;
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
     }
 }

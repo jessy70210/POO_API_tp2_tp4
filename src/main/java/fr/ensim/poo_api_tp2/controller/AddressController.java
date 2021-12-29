@@ -23,4 +23,7 @@ public class AddressController {
 //        model.addAttribute("allAddresses", addressRepository.findById());
 //        return "addresses";
 //    }
+
+    @GetMapping("/adresse")
+    public String showAdresse (Model model) { return "adresse"; }
 }

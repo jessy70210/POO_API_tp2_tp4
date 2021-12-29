@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr" xml:th="http://www.thymeleaf.org">
+<head>
+    <title>Meteo</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+
+    <th:block th:insert="~{../fragments/template::link}"></th:block>
+
+
+</head>
+<body>
+
+<nav th:replace="~{../fragments/template::nav}"></nav>
+
+
+<p th:text="'Adresse saisi : ' + ${meteo.getCity().getName()} + ' !'" />
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Jours</th>
+            <th>Température min</th>
+            <th>Température max</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="previ: ${meteo.getPrevisions()}">
+            <td th:text="'J-' +${previ.getDay()}"></td>
+            <td th:text="${previ.getTmin()}+'°C'"></td>
+            <td th:text="${previ.getTmax()}+'°C'"></td>
+    </tbody>
+</table>
+
+</body>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+</html>

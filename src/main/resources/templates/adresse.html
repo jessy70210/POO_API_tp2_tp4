@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr" xml:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Meteo</title>
+    <th:block th:insert="~{../fragments/template::link}"></th:block>
+</head>
+<body>
+
+<nav th:replace="~{../fragments/template::nav}"></nav>
+
+<h1>Demandez la meteo actuel a l'adresse de votre choix</h1>
+<form action="/meteo" method="post">
+    <div>
+        <label for="address">Votre adresse :</label>
+        <input name="address" id="address" type="text">
+    </div>
+    <div>
+        <button type="submit">Voir la meteo</button>
+    </div>
+</form>
+</body>
+</html>
